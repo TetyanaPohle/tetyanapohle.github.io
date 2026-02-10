@@ -31,6 +31,8 @@ const certificates = [
   "cert_10.png",
   "cert_11.png",
   "cert_12.png",
+  "cert_13.png",
+  "cert_14.png",
 ];
 
 const track = document.querySelector(".certificates-track");

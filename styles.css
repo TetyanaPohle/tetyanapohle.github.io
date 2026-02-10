@@ -381,9 +381,10 @@ header > .container {
 }
 
 .hero-text p {
-  font-size: 25px;
+  font-size: 19px;
   line-height: 1.6;
   text-align: center;
+  font-weight: 300;
 }
 
 .hero-text .btn {
@@ -410,7 +411,7 @@ header > .container {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, #1f1f1f 0%, rgba(31, 31, 31, 0) 35%);
+  background: linear-gradient(to top, #1f1f1f 0%, rgba(31, 31, 31, 0) 17%);
   pointer-events: none;
 }
 
@@ -485,6 +486,7 @@ header > .container {
   .hero-photo {
     width: 100vw;
     z-index: 100;
+    gap: 20px;
   }
 
   .hero-text .name {
@@ -501,7 +503,7 @@ header > .container {
 
   .hero-text p {
     font-size: 18px;
-    padding: 10px;
+    padding: 0;
   }
 }
 
@@ -562,7 +564,7 @@ header > .container {
 .lead {
   font-size: 30px;
   color: var(--color-off-white);
-  max-width: 520px;
+  max-width: 590px;
   margin: 30px auto;
   display: flex;
   text-align: center;
@@ -686,7 +688,6 @@ header > .container {
 }
 
 .services .lead {
-  font-size: 38px;
   margin: 50px auto;
   display: flex;
   align-items: center;
@@ -714,6 +715,17 @@ header > .container {
   border-radius: 22px;
   height: 420px;
   cursor: pointer;
+}
+
+.services-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.service-card:nth-child(1),
+.service-card:nth-child(3),
+.service-card:nth-child(4),
+.service-card:nth-child(8) {
+  grid-column: span 2;
 }
 
 .service-card img {
@@ -794,7 +806,7 @@ header > .container {
 /* Values Section */
 .values {
   position: relative;
-  padding: 0 30px 120px;
+  padding: 120px 30px 120px;
   background: url(./images/about.jpg) center / cover no-repeat;
   overflow: hidden;
 }
@@ -1478,6 +1490,7 @@ header > .container {
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 10000;
 }
 
 .lang-selector.mobile {
@@ -1500,5 +1513,12 @@ header > .container {
   }
   .lang-selector.mobile span {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-text p {
+    max-width: 360px;
+    margin: auto;
   }
 }

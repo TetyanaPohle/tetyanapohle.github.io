@@ -798,6 +798,12 @@ header > .container {
   .service-card {
     height: 420px;
   }
+  .service-card:nth-child(1),
+  .service-card:nth-child(3),
+  .service-card:nth-child(4),
+  .service-card:nth-child(8) {
+    grid-column: auto;
+  }
   .service-overlay {
     padding: 15px 15px 20px;
   }
@@ -887,7 +893,7 @@ header > .container {
 /* Responsive */
 @media (max-width: 998px) {
   .values {
-    padding: 0 20px 40px;
+    padding: 40px 20px 40px;
   }
   .values .logo img {
     width: 320px;
